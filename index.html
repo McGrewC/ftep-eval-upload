@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSO FTEP Evaluation Upload</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0f7fa;
+        padding: 40px;
+      }
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #007c91;
+      }
+      label {
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: bold;
+      }
+      select, input[type="date"], input[type="file"], button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      button {
+        background: #0097a7;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      button:hover {
+        background: #007c91;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>🚔 CSO FTEP Evaluation Upload</h2>
+
+      <form method="POST" enctype="multipart/form-data"
+      action="https://script.google.com/macros/s/AKfycbwDNaprubpuA0umN8JMDFEBXqB17dnjJ38q3iNkLANQYuPt4Lkr12JtT-ZMpXUc5lVZQA/exec">
+
+        <label for="evalDate">Weekly Evaluation End Date:</label>
+        <input type="date" name="evalDate" required>
+
+        <label for="traineeName">CSO Trainee Name:</label>
+        <select name="traineeName" required>
+          <option disabled selected>Choose a name</option>
+          <option>Alleyne, Terique</option>
+          <option>Anderson, Rolf</option>
+          <option>Campbell, David</option>
+          <option>Erskine, Neville</option>
+          <option>Hochstetler, Michelle</option>
+          <option>Johansen, Steven</option>
+          <option>Luyon, Jed</option>
+          <option>Mei, Yuri</option>
+          <option>Ortiz, Jose</option>
+          <option>Redpath, James</option>
+        </select>
+
+        <label for="trainingWeek">Training Week:</label>
+        <select name="trainingWeek" required>
+          <option disabled selected>Choose a week</option>
+          <option>Week 1</option>
+          <option>Week 2</option>
+          <option>Week 3</option>
+          <option>Week 4</option>
+          <option>Week 5</option>
+          <option>Week 6</option>
+          <option>Week 7</option>
+          <option>Week 8</option>
+          <option>Week 9</option>
+          <option>Week 10</option>
+          <option>Week 11</option>
+          <option>Week 12</option>
+          <option>Week 13</option>
+          <option>Week 14</option>
+          <option>Week 15</option>
+          <option>Week 16</option>
+          <option>Week 17+</option>
+        </select>
+
+        <label for="evalFile">Evaluation PDF:</label>
+        <input type="file" name="evalFile" accept="application/pdf" required>
+
+        <label for="memoFile">FTEP Completion Memo (Optional):</label>
+        <input type="file" name="memoFile" accept="application/pdf">
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
